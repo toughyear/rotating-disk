@@ -35,20 +35,20 @@ function App() {
     [containerRect]
   );
 
-  // to be used!
-  const getAngle = useCallback(
-    (tweetY: number, shiftedX: number) => {
-      if (!containerRect) {
-        return 0;
-      }
-      // compare with the left center of containerRect
-      const m = containerRect.x;
-      const n = containerRect.y + containerRect.height / 2;
-      const angle = Math.atan((tweetY - n) / (m - shiftedX));
-      return angle;
-    },
-    [containerRect]
-  );
+  // // to be used!
+  // const getAngle = useCallback(
+  //   (tweetY: number, shiftedX: number) => {
+  //     if (!containerRect) {
+  //       return 0;
+  //     }
+  //     // compare with the left center of containerRect
+  //     const m = containerRect.x;
+  //     const n = containerRect.y + containerRect.height / 2;
+  //     const angle = Math.atan((tweetY - n) / (m - shiftedX));
+  //     return angle;
+  //   },
+  //   [containerRect]
+  // );
 
   const updateTweetPositions = useCallback(() => {
     if (containerRect) {
